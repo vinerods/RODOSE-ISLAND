@@ -1,0 +1,14 @@
+.section-index {
+    padding: 60px 60px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+button {
+    font-family: monospace;
+    font-size: var(--base-font-size);
+    color: var(--basic-text-color);
+    background-color: var(--action-panel-background-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

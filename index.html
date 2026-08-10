@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="pages/special-pages-style/index.css">
+    <link rel="stylesheet" href="pages/basic-style/basic-ctyle.css">
+    <link rel="icon" type="image/x-icon" href="contents/img/photo_2023-07-04_17-18-54.jpg">
+    <title>Rhodos: Index</title>
 </head>
 <body>
-    <a href="pages/home-page.html"><button>click!</button></a>
+    <nav>
+        <header>
+            <h1 class="header-text">RHODOS</h1>
+        </header>
+        <ul class="nav-list">
+            <li class="nav-list-link active"><a href="">ARCHIVE</a></li>
+            <li class="nav-list-link active"><a href="">PROJECTS</a></li>
+            <li class="nav-list-link active"><a href="">HOME</a></li>
+        </ul>
+    </nav>
+    <section class="section-index">   
+        <button class="button-index" onclick="window.location.href='pages/home-page.html'">home</button>
+        <button class="button-index" onclick="window.location.href='pages/projects-page.html'">projects</button>
+        <button class="button-index" onclick="window.location.href='pages/archive-page.html'">archive</button>
+    </section>
+    <footer>
+        <p class="text-footer">RHODOS | 2026-PRESENT</p>
+    </footer>
 </body>
 </html>

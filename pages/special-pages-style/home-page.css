@@ -15,23 +15,13 @@
     width: 100%;
 }
 
-.section-header-text {
-    color: #00bfff;
-}
-
 .article-text {
     position: relative;
     z-index: 1;
     width: 100%;
 }
 
-.text {
-    font-family: monospace;
-    color: #00bfff;
-    font-size: 15px;
-}
-
-.shadow-layour {
+.shadow-layout {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +31,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-video {
+.background-image {
     display: block;
     position: absolute;
     top: 0;
@@ -62,14 +52,14 @@ video {
     display: flex;
     width: max-content;
     gap: 10px;
-    animation: marquee 15s linear infinite;
+    animation: marquee 3s linear infinite;
 }
 
 .item {
-    padding: 20px 60px;
+    padding: 60px 60px;
 }
 
 @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%);}
+    100% { transform: translateX(-10%);}
 }

@@ -1,62 +1,97 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    /* Colors */
+    --primary-background-color: #070707; /* Nyx Eclipse */
+    --panel-background-color: #0d0d0d; /* Eclipse Abyss */
+    --action-panel-background-color: #0145f2; /* Electrig Blue */
+    --basic-text-color: #fafafa; /* Cloud White */
+    --alternative-text-color: #0145f2; /* Electrig Blue */
+    
+    /* Sizes */
+    --base-font-size: 1rem; /* 16px */
+    --font-h2-size: 1.75rem; /* 28px */
+    --font-h1-size: 1.5rem, 5vw, 3rem; /* 40px */
+    --container-width: 1200px; /* Max width for content */
+    --container-padding: 20px; /* Відступи по боках на малих екранах */
 }
-body {
-    background-color: #272731;
-    height: auto;
+
+/* Базовий код (пишеться без медіа-запитів) — йде для СМАРТФОНІВ */
+.card {
+    flex-direction: column; /* На телефоні елементи стоять в стовпчик */
+}
+
+/* Планшети (від 768px і вище) */
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row; /* На планшеті вже є місце розгорнути їх в рядок */
+    }
+}
+
+/* Ноутбуки (від 1024px і вище) */
+@media (min-width: 1024px) {
+    :root {
+        --fs-base: 1.125rem; /* Збільшуємо базовий масштаб шрифту для великих екранів */
+    }
+}
+
+/* Великі монітори (від 1440px і вище) */
+@media (min-width: 1440px) {
+    /* Додаткові оптимізації для ультра-десктопів */
+}
+
+* {
+    box-sizing: border-box;
+    font-size: var(--base-font-size);
+}
+
+/* CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    /* Робимо прокрутку плавною (наприклад, для якорів) */
+    scroll-behavior: smooth;
+    /* Покращуємо рендеринг шрифтів на Mac/iOS */
+    -webkit-font-smoothing: antialiased;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--action-panel-background-color) var(--panel-background-color);
+}
+
+/* Для Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--panel-background-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--action-panel-background-color);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--action-panel-background-color);
+}
+
+body {
+    background-color: var(--primary-background-color);
+    height: auto;
+    /* Запобігаємо появі горизонтального скролу через випадкові відступи */
+    min-height: 100vh;
+    line-height: 1.5;
 }
 
 nav{
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    background-color: #30303d;
-}
-
-.nav-list {
-    margin-left: auto;
-    z-index: 1;
-    height: 7.5%;
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-    background-color: #30303d;
-}
-
-.nav-list-link {
-    float: right;
-}
-
-.nav-list-link a {
-    font-family: monospace;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 22px;
-    text-decoration: none;
-}
-
-.nav-list-link a:hover {
-    background-color: #00bfff;
-}
-
-.active {
-    background-color: #00bfff;
-    color: black;
+    background-color: var(--panel-background-color);
 }
 
 header  {
     padding-left: 50px;
-}
-
-.header-text {
-    font-family: monospace;
-    font-size: 20px;
-    color: #00bfff;
 }
 
 footer {
@@ -69,10 +104,98 @@ footer {
     list-style-type: none;
     box-sizing: border-box;
     text-align: center;
-    background-color: #30303d;
+    background-color: var(--panel-background-color);
 }
+
+h1 {
+    font-size: clamp(var(--font-h1-size));
+    color: var(--basic-text-color);
+}
+
+h2 {
+    font-size: var(--font-h2-size);
+    color: var(--basic-text-color);
+}
+
+p {
+    font-size: var(--base-font-size);
+    color: var(--basic-text-color);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Посилання наслідує колір тексту свого батька */
+}
+
+/* Скидаємо стандартні стилі для форм та кнопок */
+input, button, textarea, select {
+    font: inherit; /* Щоб шрифти не змінювалися на системні у формах */
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+/* Робота з картинками - безпечна */
+img, picture {
+    max-width: 100%;
+    display: block; /* Прибирає загадковий нижній відступ у 4px */
+}
+
+.nav-list {
+    margin-left: auto;
+    z-index: 1;
+    height: 7.5%;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: var(--panel-background-color);
+}
+
+.nav-list-link {
+    float: right;
+}
+
+.nav-list-link a {
+    font-family: monospace;
+    display: block;
+    color: var(--basic-text-color);
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+}
+
+.nav-list-link a:hover {
+    background-color: var(--action-panel-background-color);
+}
+
+.active {
+    background-color: var(--action-panel-background-color);
+}
+
+.header-text {
+    font-family: monospace;
+    font-size: 20px;
+    color: var(--action-panel-background-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
 .text-footer {
     font-family: monospace;
     padding-top: 25px;
-    color: #ffffff;
+    color: var(--basic-text-color);
 }
