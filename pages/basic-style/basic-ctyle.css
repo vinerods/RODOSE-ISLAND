@@ -151,7 +151,7 @@ img, picture {
 .nav-list {
     margin-left: auto;
     z-index: 1;
-    height: 7.5%;
+    height: 6.5%;
     padding: 0;
     overflow: hidden;
     list-style-type: none;
@@ -182,7 +182,7 @@ img, picture {
 .header-text {
     font-family: monospace;
     font-size: 20px;
-    color: var(--action-panel-background-color);
+    color: var(--basic-text-color);
 }
 
 .container {
