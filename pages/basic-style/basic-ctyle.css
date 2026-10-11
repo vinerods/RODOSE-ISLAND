@@ -163,7 +163,7 @@ img, picture {
 
 .nav-list-link a {
     font-family: monospace;
-    display: block;
+    
     color: var(--basic-text-color);
     text-align: center;
     padding: 20px 22px;
