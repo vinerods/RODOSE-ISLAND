@@ -41,25 +41,3 @@
     z-index: -2;
     object-fit: cover;
 }
-
-.marquee-conteiner {
-    overflow: hidden;
-    width: 100%;
-    padding: 50px 0 50px 0;
-}
-
-.marquee-track {
-    display: flex;
-    width: max-content;
-    gap: 10px;
-    animation: marquee 3s linear infinite;
-}
-
-.item {
-    padding: 60px 60px;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-10%);}
-}

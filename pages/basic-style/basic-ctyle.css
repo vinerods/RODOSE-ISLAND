@@ -88,6 +88,8 @@ nav{
     top: 0;
     box-sizing: border-box;
     align-items: center;
+    display: flex;
+    height: 6.5%;
     background-color: var(--panel-background-color);
 }
 
@@ -152,7 +154,7 @@ img, picture {
 .nav-list {
     margin-left: auto;
     z-index: 1;
-    padding: 0;
+    padding-right: 50px;
     list-style-type: none;
     background-color: var(--panel-background-color);
 }
@@ -163,19 +165,21 @@ img, picture {
 
 .nav-list-link a {
     font-family: monospace;
-    
     color: var(--basic-text-color);
     text-align: center;
-    padding: 20px 22px;
+    padding: 10px 12px;
+    display: block;
     text-decoration: none;
 }
 
 .nav-list-link a:hover {
     background-color: var(--action-panel-background-color);
+    
 }
 
 .active {
     background-color: var(--action-panel-background-color);
+    
 }
 
 .header-text {
