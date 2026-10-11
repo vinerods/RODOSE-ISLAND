@@ -84,6 +84,7 @@ body {
 }
 
 nav{
+    position: fixed;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -167,7 +168,7 @@ img, picture {
     display: block;
     color: var(--basic-text-color);
     text-align: center;
-    padding: 16px 22px;
+    padding: 20px 22px;
     text-decoration: none;
 }
 
