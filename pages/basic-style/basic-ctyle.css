@@ -93,21 +93,50 @@ nav{
     background-color: var(--panel-background-color);
 }
 
+.nav-list {
+    margin-left: auto;
+    z-index: 1;
+    padding-right: 50px;
+    list-style-type: none;
+    background-color: var(--panel-background-color);
+}
+
+.nav-list-link {
+    float: right;
+}
+
+.nav-list-link a {
+    font-family: monospace;
+    color: var(--basic-text-color);
+    text-align: center;
+    padding: 10px 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.nav-list-link a:hover {
+    background-color: var(--action-panel-background-color);
+    
+}
+
+.active {
+    background-color: var(--action-panel-background-color);
+    
+}
+
 header  {
     padding-left: 50px;
 }
 
-footer {
-    z-index: 1;
-    width: 100%;
-    height: 100px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: var(--panel-background-color);
+.header-text {
+    font-family: monospace;
+    font-size: 20px;
+    color: var(--basic-text-color);
+}
+
+.space-div {
+    height: 50px;
+    background-color: var(--action-panel-background-color);
 }
 
 h1 {
@@ -151,50 +180,17 @@ img, picture {
     display: block; /* Прибирає загадковий нижній відступ у 4px */
 }
 
-.nav-list {
-    margin-left: auto;
+footer {
     z-index: 1;
-    padding-right: 50px;
-    list-style-type: none;
-    background-color: var(--panel-background-color);
-}
-
-.nav-list-link {
-    float: right;
-}
-
-.nav-list-link a {
-    font-family: monospace;
-    color: var(--basic-text-color);
-    text-align: center;
-    padding: 10px 12px;
-    display: block;
-    text-decoration: none;
-}
-
-.nav-list-link a:hover {
-    background-color: var(--action-panel-background-color);
-    
-}
-
-.active {
-    background-color: var(--action-panel-background-color);
-    
-}
-
-.header-text {
-    font-family: monospace;
-    font-size: 20px;
-    color: var(--basic-text-color);
-}
-
-.container {
-    max-width: var(--container-width);
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--panel-background-color);
 }
 
 .text-footer {

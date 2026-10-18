@@ -1,4 +1,4 @@
-.div-section-first {
+.div-bg-first {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -40,4 +40,15 @@
     height: 100%;
     z-index: -2;
     object-fit: cover;
+}
+
+.section-first {
+    position: relative;
+    height: 25vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
